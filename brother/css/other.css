@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+body,html,table,tr,td,ul,li,p,span{margin: 0; padding: 0;}
+a:hover{text-decoration: none}
+table{border-left: 0; border-right: 0;}
+ul,li{list-style: none;}
+
+.header{height: 60px; width: 100%; background-color: #F3F1F1; line-height: 60px; padding: 0 30px;}
+.htitle{font-size: 24px; color: #7F7F7F; float: left;}
+.user{float: right;}
+.user ul{min-width: 90px;}
+.main{width: 1500px; height: 900px; margin: 0 auto; overflow: hidden;}
+.box{margin-top: 30px;}
+.Lmenu{width: 180px; height: auto; float: left;}
+.Lmenu a{display: block; padding: 10px 20px; text-align: left;}
+.Lmenu a span{float: right;}
+
+.Rshow{float: right; width: 1300px; height: auto; background-color: #ECEEF6; border-radius: 5px; border: 1px solid #D8D8D8;}
+.stitle{width: 100%; height: 100px; padding: 0px 20px;}
+.stitle h1{float: left;}
+.stitle a{float: right; margin-top: 25px;}
+.showtable{width: 100%; height: 548px; background-color: white;}
+.page{width: 100%; height: 80px; overflow: hidden;}
+.pul{width: 350px; height: 50px; margin-left: auto; margin-right: auto; margin-top: 25px;}
+.rollpage{margin-left: auto; margin-right: auto;}
+.rollpage li{ float: left; margin-left: 5px;}
