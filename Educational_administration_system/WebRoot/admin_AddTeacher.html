@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>教师管理-添加教师</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/other.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<div class="htitle">教务查询系统(管理员)</div>
+			<div class="user dropdown">
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>用户名<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="">退出</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			<div class="box">
+				<div class="Lmenu">
+					<a href="admin_CourseList.html">课程管理<span class="glyphicon glyphicon-list-alt"></span></a>
+					<a href="admin_Studentlist.html">学生管理<span class="glyphicon glyphicon-user"></span></a>
+					<a href="admin_TeacherList.html" class="btn btn-info active">教师管理<span class="glyphicon glyphicon-book"></span></a>
+					<a href="admin_Setnewpasaword.html">修改密码<span class="glyphicon glyphicon-edit"></span></a>
+					<a href="admin_ResetStuList.html">账号密码重置<span class="glyphicon glyphicon-repeat"></span></a>
+				</div>
+				<div class="Rshow">
+					<div class="stitle">
+						<h1>添加教师</h1>
+					</div>
+					<div class="updatetable">
+						<div>
+							<form class="form-horizontal" action="" method="post" role="form">
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="teacherId" class="control-label">工号:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="teacherId" id="teacherId" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="teacherName" class="control-label">教师姓名:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="teacherName" id="teacherName" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="sex" class="control-label">性别:</label>
+									</div>
+									<div class="col-sm-10">
+										<select name="sex" class="form-control">
+											<option value="1">男</option>
+											<option value="0">女</option>
+										</select>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="birthYear" class="control-label">出生日期:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="birthYear" id="birthYear" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="degree" class="control-label">学历:</label>
+									</div>
+									<div class="col-sm-10">
+										<select name="degree" class="form-control">
+											<option value="1">本科</option>
+											<option value="2">研究生</option>
+											<option value="3">博士</option>
+										</select>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="ptitle" class="control-label">职称:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="ptitle" id="ptitle" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="grade" class="control-label">就职日期:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="grade" id="grade" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="collegeId" class="control-label">所属学院:</label>
+									</div>
+									<div class="col-sm-10">
+										<select name="collegeId" class="form-control">
+											<option value="1">信工</option>
+											<option value="2">商学院</option>
+										</select>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="tAddress" class="control-label">教师住址:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="tAddress" id="tAddress" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="tPhone" class="control-label">教师电话:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="tPhone" id="tPhone" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-2">
+										<label for="tUser" class="control-label">教师账号:</label>
+									</div>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="tUser" id="tUser" value=""/>
+									</div>
+								</div>
+								<div class="from-group">
+									<div class="col-sm-8 lastdiv">
+										<input type="submit" class="btn btn-success" name="submit" value="提 交">
+										<input type="reset" class="btn btn-default" name="reset" value="重 置">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/other.js"></script>
+</html>
