@@ -19,6 +19,8 @@ ul,li{list-style: none;}
 .stitle h1{float: left;}
 .stitle a{float: right; margin-top: 25px;}
 .showtable{width: 100%; height: 548px; background-color: white;}
+.showtable th{text-align: center;}
+.showtable td{text-align: center;}
 .page{width: 100%; height: 80px; overflow: hidden;}
 .pul{width: 350px; height: 50px; margin-left: auto; margin-right: auto;}
 .rollpage{margin-left: auto; margin-right: auto;}
