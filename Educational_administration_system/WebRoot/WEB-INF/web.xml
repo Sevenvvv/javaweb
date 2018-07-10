@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Educational_administration_system</display-name>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.cn.action.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_CourselistServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_CourselistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_StudentlistServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_StudentlistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_TeacherlistServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_TeacherlistServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_CourselistServlet</servlet-name>
+    <url-pattern>/admin_Courselist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_StudentlistServlet</servlet-name>
+    <url-pattern>/admin_Studentlist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_TeacherlistServlet</servlet-name>
+    <url-pattern>/admin_Teacherlist</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>

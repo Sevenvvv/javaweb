@@ -8,9 +8,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class BaseDao {
-	private static final String URL = "jdbc:mysql://localhost:3306/dbs?characterEncoding=utf-8";
+	
+	private static final String URL ="jdbc:mysql://localhost:3306/javaweb?useUnicode=true&characterEncoding=UTF-8";
 	private static final String USERNAME = "root";
-	private static final String PASSWORD = "root";
+	private static final String PASSWORD = "";	
 	
 	public static Connection getConnection(){
 		Connection cn = null;
