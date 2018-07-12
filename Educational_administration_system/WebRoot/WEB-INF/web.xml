@@ -17,6 +17,96 @@
     <servlet-name>Admin_TeacherlistServlet</servlet-name>
     <servlet-class>com.cn.action.Admin_TeacherlistServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Admin_AddStudentServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_AddStudentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_AddCourseServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_AddCourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_AddTeacherServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_AddTeacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_BefCourseModifyServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_BefCourseModifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_BefStudentModifyServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_BefStudentModifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_BefTeacherModifyServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_BefTeacherModifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ModifyCourseServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ModifyCourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ModifyStudentServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ModifyStudentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ModifyTeacherServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ModifyTeacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_DelCourseServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_DelCourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_DelStudentServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_DelStudentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_DelTeacherServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_DelTeacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ResetStuServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ResetStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ResetTeaServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ResetTeaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ResetStuListServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ResetStuListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_ResetTeaListServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_ResetTeaListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_CourseListServlet</servlet-name>
+    <servlet-class>com.cn.action.Student_CourseListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin_SetNewPasswordServlet</servlet-name>
+    <servlet-class>com.cn.action.Admin_SetNewPasswordServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -36,6 +126,82 @@
     <servlet-name>Admin_TeacherlistServlet</servlet-name>
     <url-pattern>/admin_Teacherlist</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_AddStudentServlet</servlet-name>
+    <url-pattern>/admin_Addstudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_AddCourseServlet</servlet-name>
+    <url-pattern>/admin_Addcourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_AddTeacherServlet</servlet-name>
+    <url-pattern>/admin_Addteacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_BefCourseModifyServlet</servlet-name>
+    <url-pattern>/admin_Befcoursemodify</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_BefStudentModifyServlet</servlet-name>
+    <url-pattern>/admin_Befstudentmodify</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_BefTeacherModifyServlet</servlet-name>
+    <url-pattern>/admin_Befteachermodify</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ModifyCourseServlet</servlet-name>
+    <url-pattern>/admin_Modifycourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ModifyStudentServlet</servlet-name>
+    <url-pattern>/admin_Modifystudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ModifyTeacherServlet</servlet-name>
+    <url-pattern>/admin_Modifyteacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_DelCourseServlet</servlet-name>
+    <url-pattern>/admin_Delcourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_DelStudentServlet</servlet-name>
+    <url-pattern>/admin_Delstudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_DelTeacherServlet</servlet-name>
+    <url-pattern>/admin_Delteacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ResetStuServlet</servlet-name>
+    <url-pattern>/admin_Resetstu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ResetTeaServlet</servlet-name>
+    <url-pattern>/admin_Resettea</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ResetStuListServlet</servlet-name>
+    <url-pattern>/admin_Resetstulist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_ResetTeaListServlet</servlet-name>
+    <url-pattern>/admin_Resettealist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_CourseListServlet</servlet-name>
+    <url-pattern>/student_Courselist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Admin_SetNewPasswordServlet</servlet-name>
+    <url-pattern>/admin_Setnewpassword</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+	<session-timeout>15</session-timeout>
+  </session-config>
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

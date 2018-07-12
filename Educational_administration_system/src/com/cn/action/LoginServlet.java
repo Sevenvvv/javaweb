@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.cn.biz.TblUserBiz;
+import com.cn.biz.TblUsersBiz;
 import com.cn.biz.impl.TblUsersBizImpl;
 import com.cn.entity.TblAdmin;
 import com.cn.entity.TblStudent;
@@ -16,7 +16,7 @@ import com.cn.entity.TblTeacher;
 
 public class LoginServlet extends HttpServlet {
 
-	private TblUserBiz tblUserBiz = new TblUsersBizImpl();
+	private TblUsersBiz tblUsersBiz = new TblUsersBizImpl();
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -31,27 +31,32 @@ public class LoginServlet extends HttpServlet {
 		TblTeacher tblteacher = null;
 		TblAdmin tbladmin = null;
 		
+		
+		
 		if("1".equals(usertype)){
-			tblstudent = tblUserBiz.stulogin(username,password);
+			tblstudent = tblUsersBiz.stulogin(username,password);
 			if(tblstudent != null){
-				response.sendRedirect("admin_Courselist");
+				request.getSession().setAttribute("suser", tblstudent);
+				response.sendRedirect("student_Courselist");
 			}else{
 				request.setAttribute("errMsg", "用户名或密码错误");
 				request.setAttribute("username", username);
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			}
 		}else if("2".equals(usertype)){
-			tblteacher = tblUserBiz.tealogin(username,password);
+			tblteacher = tblUsersBiz.tealogin(username,password);
 			if(tblteacher != null){
-				response.sendRedirect("admin_Courselist");
+				request.getSession().setAttribute("tuser", tblteacher);
+				response.sendRedirect("teacher_Courselist");
 			}else{
 				request.setAttribute("errMsg", "用户名或密码错误");
 				request.setAttribute("username", username);
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			}
 		}else if("0".equals(usertype)){
-			tbladmin = tblUserBiz.adminlogin(username,password);
+			tbladmin = tblUsersBiz.adminlogin(username,password);
 			if(tbladmin != null){
+				request.getSession().setAttribute("auser", tbladmin);
 				response.sendRedirect("admin_Courselist");
 			}else{
 				request.setAttribute("errMsg", "用户名或密码错误");

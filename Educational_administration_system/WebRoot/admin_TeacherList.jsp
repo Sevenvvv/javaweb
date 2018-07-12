@@ -8,14 +8,22 @@
 		<title>教师管理</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/other.css"/>
+		<script type="text/javascript">
+			function confirmRemove(teacherID){
+				var flag = confirm("真的要删除吗?");
+				if(flag){
+					window.location.href = "admin_Delteacher?teacherId=" + teacherID;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="header">
 			<div class="htitle">教务查询系统(管理员)</div>
 			<div class="user dropdown">
-				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>用户名<span class="caret"></span></button>
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>${sessionScope.auser.adminID}<span class="caret"></span></button>
 				<ul class="dropdown-menu">
-					<li><a href="login.html">退出</a></li>
+					<li><a href="login.jsp">退出</a></li>
 				</ul>
 			</div>
 		</div>
@@ -25,13 +33,13 @@
 					<a href="admin_Courselist">课程管理<span class="glyphicon glyphicon-list-alt"></span></a>
 					<a href="admin_Studentlist">学生管理<span class="glyphicon glyphicon-user"></span></a>
 					<a href="admin_Teacherlist" class="btn btn-info active">教师管理<span class="glyphicon glyphicon-book"></span></a>
-					<a href="admin_Setnewpasaword">修改密码<span class="glyphicon glyphicon-edit"></span></a>
-					<a href="admin_ResetStulist">账号密码重置<span class="glyphicon glyphicon-repeat"></span></a>
+					<a href="admin_SetNewPassword.jsp">修改密码<span class="glyphicon glyphicon-edit"></span></a>
+					<a href="admin_Resetstulist">账号密码重置<span class="glyphicon glyphicon-repeat"></span></a>
 				</div>
 				<div class="Rshow">
 					<div class="stitle">
 						<h1>教师信息管理</h1>
-						<a href="admin_AddTeacher.html" class="btn btn-default">添加教师信息<span class="glyphicon glyphicon-plus"></span></a>
+						<a href="admin_AddTeacher.jsp" class="btn btn-default">添加教师信息<span class="glyphicon glyphicon-plus"></span></a>
 					</div>
 					<div class="showtable">
 						<table class="table table-bordered table-striped">
@@ -60,8 +68,7 @@
 									<td>${teacher.grade}</td>
 									<td>${teacher.collegeName}</td>
 									<td>
-										<a href="admin_UpdateTeacher.html" class="btn btn-info">修改</a>
-										<a href="" class="btn btn-danger">删除</a>
+										<a href="admin_Resettea?teacherId=${teacher.teacherID}" class="btn btn-warning">重置密码</a>
 									</td>
 								</tr>
 							</c:forEach>

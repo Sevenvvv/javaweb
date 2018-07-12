@@ -32,3 +32,4 @@ ul,li{list-style: none;}
 .lastdiv{margin-bottom: 20px;}
 
 .mark{color: red; background-color: white;}
+.errMsg{height: 20px; width: 100%; text-align: center; color:red;}

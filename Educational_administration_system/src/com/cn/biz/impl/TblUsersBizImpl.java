@@ -6,22 +6,18 @@ import com.cn.dao.impl.TblTeacherDaoImpl;
 import com.cn.entity.TblAdmin;
 import com.cn.entity.TblStudent;
 import com.cn.entity.TblTeacher;
-import com.cn.biz.TblUserBiz;
-import com.cn.dao.TblAdminDao;
+import com.cn.biz.TblUsersBiz;
 import com.cn.dao.TblStudentDao;
 import com.cn.dao.TblTeacherDao;
 
-public class TblUsersBizImpl implements TblUserBiz {
+public class TblUsersBizImpl implements TblUsersBiz {
 	
 	private TblTeacherDao tblTeacherDao = new TblTeacherDaoImpl();
 	private TblStudentDao tblStudentDao = new TblStudentDaoImpl();
-	private TblAdminDao tblAdminDao = new TblAdminDaoImpl();
-	
-	/* (non-Javadoc)
-	 * @see com.cn.biz.impl.TblUserBiz#stulogin(java.lang.String, java.lang.String)
-	 */
-	public TblStudent stulogin(String name, String password) {
-		TblStudent tblstudent = tblStudentDao.selectByNameFun(name);
+	private com.cn.dao.TblAdminDao tblAdminDao = new TblAdminDaoImpl();
+
+	public TblStudent stulogin(String id, String password) {
+		TblStudent tblstudent = tblStudentDao.selectByUsernameFun(id);
 		
 		if (tblstudent != null && password.equals(tblstudent.getsPassword())){
 			return tblstudent;
@@ -30,11 +26,8 @@ public class TblUsersBizImpl implements TblUserBiz {
 		return null;
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.cn.biz.impl.TblUserBiz#tealogin(java.lang.String, java.lang.String)
-	 */
-	public TblTeacher tealogin(String name, String password) {
-		TblTeacher tblteacher = tblTeacherDao.selectByNameFun(name);
+	public TblTeacher tealogin(String id, String password) {
+		TblTeacher tblteacher = tblTeacherDao.selectByUsernameFun(id);
 		
 		if (tblteacher != null && password.equals(tblteacher.gettPassword())){
 			return tblteacher;
@@ -42,12 +35,9 @@ public class TblUsersBizImpl implements TblUserBiz {
 		
 		return null;
 	}
-	
-	/* (non-Javadoc)
-	 * @see com.cn.biz.impl.TblUserBiz#adminlogin(java.lang.String, java.lang.String)
-	 */
-	public TblAdmin adminlogin(String name, String password) {
-		TblAdmin tbladmin = tblAdminDao.selectByNameFun(name);
+
+	public TblAdmin adminlogin(String id, String password) {
+		TblAdmin tbladmin = tblAdminDao.selectByUsernameFun(id);
 		
 		if (tbladmin != null && password.equals(tbladmin.getaPassword())){
 			return tbladmin;
@@ -55,4 +45,5 @@ public class TblUsersBizImpl implements TblUserBiz {
 		
 		return null;
 	}
+	
 }

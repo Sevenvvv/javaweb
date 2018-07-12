@@ -8,12 +8,20 @@
 		<title>学生管理</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/other.css"/>
+		<script type="text/javascript">
+			function confirmRemove(studentID){
+				var flag = confirm("真的要删除吗?");
+				if(flag){
+					window.location.href = "admin_Delstudent?studentId=" + studentID;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="header">
 			<div class="htitle">教务查询系统(管理员)</div>
 			<div class="user dropdown">
-				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>用户名<span class="caret"></span></button>
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>${sessionScope.auser.adminID}<span class="caret"></span></button>
 				<ul class="dropdown-menu">
 					<li><a href="login.jsp">退出</a></li>
 				</ul>
@@ -25,13 +33,13 @@
 					<a href="admin_Courselist">课程管理<span class="glyphicon glyphicon-list-alt"></span></a>
 					<a href="admin_Studentlist" class="btn btn-info active">学生管理<span class="glyphicon glyphicon-user"></span></a>
 					<a href="admin_Teacherlist">教师管理<span class="glyphicon glyphicon-book"></span></a>
-					<a href="admin_Setnewpasaword">修改密码<span class="glyphicon glyphicon-edit"></span></a>
-					<a href="admin_ResetStulist">账号密码重置<span class="glyphicon glyphicon-repeat"></span></a>
+					<a href="admin_SetNewPassword.jsp">修改密码<span class="glyphicon glyphicon-edit"></span></a>
+					<a href="admin_Resetstulist">账号密码重置<span class="glyphicon glyphicon-repeat"></span></a>
 				</div>
 				<div class="Rshow">
 					<div class="stitle">
 						<h1>学生信息管理</h1>
-						<a href="admin_AddStudent.html" class="btn btn-default">添加学生信息<span class="glyphicon glyphicon-plus"></span></a>
+						<a href="admin_AddStudent.jsp" class="btn btn-default">添加学生信息<span class="glyphicon glyphicon-plus"></span></a>
 					</div>
 					<div class="showtable">
 						<table class="table table-bordered table-striped">
@@ -62,8 +70,8 @@
 									<td>${student.className}</td>
 									<td>${student.teacherName}</td>
 									<td>
-										<a href="admin_UpdateStudent.html" class="btn btn-info">修改</a>
-										<a href="" class="btn btn-danger">删除</a>
+										<a href="admin_Befstudentmodify?studentId=${student.studentID}" class="btn btn-info">修改</a>
+										<a href="javascript:confirmRemove(${student.studentID})" class="btn btn-danger">删除</a>
 									</td>
 								</tr>
 							</c:forEach>
