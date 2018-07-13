@@ -15,7 +15,7 @@
 			<div class="user dropdown">
 				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>${sessionScope.auser.adminID}<span class="caret"></span></button>
 				<ul class="dropdown-menu">
-					<li><a href="login.jsp">退出</a></li>
+					<li><a href="outLogin">退出</a></li>
 				</ul>
 			</div>
 		</div>

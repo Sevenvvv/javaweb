@@ -129,6 +129,11 @@
     <servlet-name>Student_ChoiceCourseServlet</servlet-name>
     <servlet-class>com.cn.action.Student_ChoiceCourseServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>OutLoginServlet</servlet-name>
+    <servlet-class>com.cn.action.OutLoginServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -268,6 +273,10 @@
   <servlet-mapping>
     <servlet-name>Student_ChoiceCourseServlet</servlet-name>
     <url-pattern>/student_Choicecourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OutLoginServlet</servlet-name>
+    <url-pattern>/outLogin</url-pattern>
   </servlet-mapping>
   
   <session-config>
