@@ -54,16 +54,6 @@ public class TblCourseDaoImpl implements TblCourseDao{
 		return false;
 	}
 
-
-	/* (non-Javadoc)
-	 * @see com.cn.dao.impl.TblCourseDao#selectAll()
-	 */
-	/* (non-Javadoc)
-	 * @see com.cn.dao.impl.TblCourseDao#selectAll()
-	 */
-	/* (non-Javadoc)
-	 * @see com.cn.dao.impl.TblCourseDao#selectAll()
-	 */
 	public List<TblCourse> selectAll() {
 		Connection cn = BaseDao.getConnection();
 		String sql = "select * from tbl_course";

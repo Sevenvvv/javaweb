@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.cn.biz.TblCourseBiz;
-import com.cn.biz.impl.TblCourseBizImpl;
+import com.cn.biz.TblListBiz;
+import com.cn.biz.impl.TblListBizImpl;
 import com.cn.util.PageBean;
 
 public class Student_CourseListServlet extends HttpServlet {
 
-private TblCourseBiz tblCourseBiz = new TblCourseBizImpl();
+	private TblListBiz tblListBiz = new TblListBizImpl();
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -28,7 +28,7 @@ private TblCourseBiz tblCourseBiz = new TblCourseBizImpl();
 			e.printStackTrace();
 		}
 		
-		PageBean pageBean = tblCourseBiz.CourseViewByPageFun(pageNum, 10);
+		PageBean pageBean = tblListBiz.CourseViewByPageFun(pageNum, 10);
 		
 		request.setAttribute("pageBean", pageBean);
 		request.getRequestDispatcher("student_CourseList.jsp").forward(request, response);

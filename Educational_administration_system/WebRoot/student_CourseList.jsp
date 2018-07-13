@@ -25,7 +25,7 @@
 					<a href="student_Courselist" class="btn btn-info active">可选课程<span class="glyphicon glyphicon-list-alt"></span></a>
 					<a href="student_Selectedcourselist">已选课程<span class="glyphicon glyphicon-user"></span></a>
 					<a href="student_Finishcourselist">已修课程<span class="glyphicon glyphicon-book"></span></a>
-					<a href="student_Setnewpasaword">修改密码<span class="glyphicon glyphicon-edit"></span></a>
+					<a href="student_SetNewPasaword.jsp">修改密码<span class="glyphicon glyphicon-edit"></span></a>
 				</div>
 				<div class="Rshow">
 					<div class="stitle">
@@ -66,7 +66,7 @@
 									<td>${course.collegeName}</td>
 									<td>${course.point}</td>
 									<td>
-										<a href="" class="btn btn-info">选课</a>
+										<a href="student_Choicecourse?courseId=${course.courseID}" class="btn btn-info">选课</a>
 									</td>
 								</tr>
 							</c:forEach>

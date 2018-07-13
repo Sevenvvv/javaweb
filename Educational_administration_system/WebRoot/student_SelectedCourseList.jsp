@@ -8,6 +8,14 @@
 		<title>学生已选课程</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/other.css"/>
+		<script type="text/javascript">
+			function confirmRemove(courseID,studentID){
+				var flag = confirm("真的要删除吗?");
+				if(flag){
+					window.location.href = "student_Quitcourse?courseId=" + courseID + "&studentId=" + studentID;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="header">
@@ -22,10 +30,10 @@
 		<div class="main">
 			<div class="box">
 				<div class="Lmenu">
-					<a href="student_CourseList.html">可选课程<span class="glyphicon glyphicon-list-alt"></span></a>
-					<a href="student_SelectedCourseList.html" class="btn btn-info active">已选课程<span class="glyphicon glyphicon-user"></span></a>
-					<a href="student_FinishCourseList.html">已修课程<span class="glyphicon glyphicon-book"></span></a>
-					<a href="student_SetNewPasaword.html">修改密码<span class="glyphicon glyphicon-edit"></span></a>
+					<a href="student_Courselist">可选课程<span class="glyphicon glyphicon-list-alt"></span></a>
+					<a href="student_Selectedcourselist" class="btn btn-info active">已选课程<span class="glyphicon glyphicon-user"></span></a>
+					<a href="student_Finishcourselist">已修课程<span class="glyphicon glyphicon-book"></span></a>
+					<a href="student_SetNewPasaword.jsp">修改密码<span class="glyphicon glyphicon-edit"></span></a>
 				</div>
 				<div class="Rshow">
 					<div class="stitle">
@@ -46,33 +54,55 @@
 								<th>学分</th>
 								<th>操作</th>
 							</tr>
-							<tr>
-								<td>1</td>
-								<td>c语言程序设计</td>
-								<td>1001</td>
-								<td>周二</td>
-								<td>2018-1-1</td>
-								<td>七训408</td>
-								<td>18</td>
-								<td>必修课</td>
-								<td>信息工程学院</td>
-								<td>1</td>
-								<td>
-									<a href="" class="btn btn-danger">退课</a>
-								</td>
-							</tr>
+							<c:forEach items="${requestScope.pageBean.lists}" var="course">
+								<tr>
+									<td>${course.courseID}</td>
+									<td>${course.courseName}</td>
+									<td>${course.teacherID}</td>
+									<td>${course.courseTime}</td>
+									<td>${course.courseBegin}</td>
+									<td>${course.courseRoom}</td>
+									<td>${course.courseWeek}</td>
+									<td>
+										<c:if test="${course.courseType == 1}">
+											必修
+										</c:if>
+										<c:if test="${course.courseType == 0}">
+											选修
+										</c:if>
+									</td>
+									<td>${course.collegeName}</td>
+									<td>${course.point}</td>
+									<td>
+										<a href="javascript:confirmRemove(${course.courseID},${studentID})" class="btn btn-danger">退课</a>
+									</td>
+								</tr>
+							</c:forEach>
 						</table>
 					</div>
 					<div class="page">
 						<div class="pul">
 							<ul class="pagination">
-								<li><a href="">上一页</a></li>
-								<li><a href="">1</a></li>
-								<li><a href="">2</a></li>
-								<li><a href="">3</a></li>
-								<li><a href="">4</a></li>
-								<li><a href="">5</a></li>
-								<li><a href="">下一页</a></li>
+								<c:if test="${pageBean.pageNum <= 1 }">
+									<li><a href="">上一页</a></li>
+								</c:if>
+								<c:if test="${pageBean.pageNum > 1 }">
+									<li><a href="student_Selectedcourselist?pageNum=${pageBean.pageNum - 1 }">上一页</a></li>
+								</c:if>
+								<c:forEach begin="1" end="${pageBean.pageCount }" step="1" var="i">
+					                <c:if test="${page.pageNum==i }">
+					                    <li><a href="student_Selectedcourselist?pageNum=${i}">${i}</a></li>
+					                </c:if>
+					                <c:if test="${page.pageNum!=i }">
+					                    <li><a href="student_Selectedcourselist?pageNum=${i}">${i}</a></li>
+					                </c:if>
+					            </c:forEach>
+								<c:if test="${pageBean.pageNum >= pageBean.pageCount }">
+									<li><a href="">下一页</a></li>
+								</c:if>
+								<c:if test="${pageBean.pageNum < pageBean.pageCount }">
+									<li><a href="student_Selectedcourselist?pageNum=${pageBean.pageNum + 1 }">下一页</a></li>
+								</c:if>
 							</ul>
 						</div>
 					</div>

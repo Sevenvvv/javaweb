@@ -205,7 +205,7 @@ public class TblTeacherDaoImpl implements TblTeacherDao{
 	 */
 	public  List <TblTeacher> selectByPageFun(int startNum,int pageSize) {
 		Connection cn = BaseDao.getConnection();
-		String sql = "select tbl_teacher.*,tbl_college.collegeName from tbl_teacher,tbl_college where tbl_teacher.collegeID=tbl_college.collegeID order by teacherID asc limit ?,?;";
+		String sql = "select tbl_teacher.*,tbl_college.collegeName from tbl_teacher,tbl_college where tbl_teacher.collegeID=tbl_college.collegeID order by teacherID asc limit ?,?";
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		List <TblTeacher> tealist = new ArrayList();

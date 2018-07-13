@@ -106,15 +106,15 @@
 									</div>
 									<div class="col-sm-10">
 										<select name="collegeId" class="form-control">
-											<option value="1" ${tblCourse.collegeID == "1"?"selected='selected'":''}>机电工程学院</option>
-											<option value="2" ${tblCourse.collegeID == "2"?"selected='selected'":''}>建筑工程学院</option>
-											<option value="3" ${tblCourse.collegeID == "3"?"selected='selected'":''}>旅游学院</option>
-											<option value="4" ${tblCourse.collegeID == "4"?"selected='selected'":''}>商学院</option>
-											<option value="5" ${tblCourse.collegeID == "5"?"selected='selected'":''}>财经学院</option>
-											<option value="6" ${tblCourse.collegeID == "6"?"selected='selected'":''}>国际学院</option>
-											<option value="7" ${tblCourse.collegeID == "7"?"selected='selected'":''}>信息工程学院</option>
-											<option value="8" ${tblCourse.collegeID == "8"?"selected='selected'":''}>艺术工程学院</option>
-											<option value="9" ${tblCourse.collegeID == "9"?"selected='selected'":''}>公共管理学院</option>
+											<option value="1" ${tblcourse.collegeID == "1"?"selected='selected'":''}>机电工程学院</option>
+											<option value="2" ${tblcourse.collegeID == "2"?"selected='selected'":''}>建筑工程学院</option>
+											<option value="3" ${tblcourse.collegeID == "3"?"selected='selected'":''}>旅游学院</option>
+											<option value="4" ${tblcourse.collegeID == "4"?"selected='selected'":''}>商学院</option>
+											<option value="5" ${tblcourse.collegeID == "5"?"selected='selected'":''}>财经学院</option>
+											<option value="6" ${tblcourse.collegeID == "6"?"selected='selected'":''}>国际学院</option>
+											<option value="7" ${tblcourse.collegeID == "7"?"selected='selected'":''}>信息工程学院</option>
+											<option value="8" ${tblcourse.collegeID == "8"?"selected='selected'":''}>艺术工程学院</option>
+											<option value="9" ${tblcourse.collegeID == "9"?"selected='selected'":''}>公共管理学院</option>
 										</select>
 									</div>
 								</div>

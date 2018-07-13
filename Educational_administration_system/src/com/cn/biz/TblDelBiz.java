@@ -8,4 +8,6 @@ public interface TblDelBiz {
 
 	boolean delTeacher(int teacherID);
 
+	boolean QuitClass(int courseID,int studentID);
+
 }

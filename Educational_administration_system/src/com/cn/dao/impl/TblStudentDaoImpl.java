@@ -13,17 +13,7 @@ import com.cn.entity.TblStudent;
 import com.cn.entity.TblTeacher;
 
 public class TblStudentDaoImpl implements TblStudentDao{
-	
 
-	/* (non-Javadoc)
-	 * @see com.cn.dao.impl.TblStudentDao#insertStu(com.cn.entity.TblStudent)
-	 */
-	/* (non-Javadoc)
-	 * @see com.cn.dao.impl.TblStudentDao#insertStu(com.cn.entity.TblStudent)
-	 */
-	/* (non-Javadoc)
-	 * @see com.cn.dao.impl.TblStudentDao#insertStu(com.cn.entity.TblStudent)
-	 */
 	public boolean insertStu(TblStudent tblstudent){
 		Connection cn = BaseDao.getConnection();
 		String sql = "insert into tbl_student(studentID,studentName,sex,birthYear,grade,classID,sPassword) values(?,?,?,?,?,?,?)";
@@ -121,7 +111,7 @@ public class TblStudentDaoImpl implements TblStudentDao{
 	 */
 	public TblStudent selectByIDandPsw(TblStudent tblstudent) {
 		Connection cn = BaseDao.getConnection();
-		String sql = "select * from tbl_student where studentID=? and spassword";
+		String sql = "select * from tbl_student where studentID=? and spassword=?";
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 			

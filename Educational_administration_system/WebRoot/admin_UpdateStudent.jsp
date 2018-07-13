@@ -86,15 +86,15 @@
 									</div>
 									<div class="col-sm-10">
 										<select name="classId" class="form-control">
-											<option value="1" ${tblStudent.classID == "1"?"selected='selected'":''}>17机电一体化</option>
-											<option value="2" ${tblStudent.classID == "2"?"selected='selected'":''}>17工程造价</option>
-											<option value="3" ${tblStudent.classID == "3"?"selected='selected'":''}>17旅游管理</option>
-											<option value="4" ${tblStudent.classID == "4"?"selected='selected'":''}>17电子商务</option>
-											<option value="5" ${tblStudent.classID == "5"?"selected='selected'":''}>17会计专业</option>
-											<option value="6" ${tblStudent.classID == "6"?"selected='selected'":''}>17商务英语</option>
-											<option value="7" ${tblStudent.classID == "7"?"selected='selected'":''}>17软件技术</option>
-											<option value="8" ${tblStudent.classID == "8"?"selected='selected'":''}>17室内艺术设计</option>
-											<option value="9" ${tblStudent.classID == "9"?"selected='selected'":''}>17传播与策划</option>
+											<option value="1" ${tblstudent.classID == "1"?"selected='selected'":''}>17机电一体化</option>
+											<option value="2" ${tblstudent.classID == "2"?"selected='selected'":''}>17工程造价</option>
+											<option value="3" ${tblstudent.classID == "3"?"selected='selected'":''}>17旅游管理</option>
+											<option value="4" ${tblstudent.classID == "4"?"selected='selected'":''}>17电子商务</option>
+											<option value="5" ${tblstudent.classID == "5"?"selected='selected'":''}>17会计专业</option>
+											<option value="6" ${tblstudent.classID == "6"?"selected='selected'":''}>17商务英语</option>
+											<option value="7" ${tblstudent.classID == "7"?"selected='selected'":''}>17软件技术</option>
+											<option value="8" ${tblstudent.classID == "8"?"selected='selected'":''}>17室内艺术设计</option>
+											<option value="9" ${tblstudent.classID == "9"?"selected='selected'":''}>17传播与策划</option>
 										</select>
 									</div>
 								</div>

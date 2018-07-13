@@ -89,15 +89,46 @@
     <servlet-name>Admin_SetNewPasswordServlet</servlet-name>
     <servlet-class>com.cn.action.Admin_SetNewPasswordServlet</servlet-class>
   </servlet>
-
-
-
-
-
-
-
-
-
+  <servlet>
+    <servlet-name>Student_SetNewPasswordServlet</servlet-name>
+    <servlet-class>com.cn.action.Student_SetNewPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_SelectedCourseListServlet</servlet-name>
+    <servlet-class>com.cn.action.Student_SelectedCourseListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_FinishCourseServlet</servlet-name>
+    <servlet-class>com.cn.action.Student_FinishCourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_SetNewPasswordServlet</servlet-name>
+    <servlet-class>com.cn.action.Teacher_SetNewPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_CourseListServlet</servlet-name>
+    <servlet-class>com.cn.action.Teacher_CourseListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_SelectedCourseStuServlet</servlet-name>
+    <servlet-class>com.cn.action.Teacher_SelectedCourseStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_StudentGrade</servlet-name>
+    <servlet-class>com.cn.action.Teacher_StudentGrade</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_GivenPoint</servlet-name>
+    <servlet-class>com.cn.action.Teacher_GivenPoint</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_QuitCourseServlet</servlet-name>
+    <servlet-class>com.cn.action.Student_QuitCourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_ChoiceCourseServlet</servlet-name>
+    <servlet-class>com.cn.action.Student_ChoiceCourseServlet</servlet-class>
+  </servlet>
 
 
 
@@ -197,6 +228,46 @@
   <servlet-mapping>
     <servlet-name>Admin_SetNewPasswordServlet</servlet-name>
     <url-pattern>/admin_Setnewpassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_SetNewPasswordServlet</servlet-name>
+    <url-pattern>/student_Setnewpassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_SelectedCourseListServlet</servlet-name>
+    <url-pattern>/student_Selectedcourselist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_FinishCourseServlet</servlet-name>
+    <url-pattern>/student_Finishcourselist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_SetNewPasswordServlet</servlet-name>
+    <url-pattern>/teacher_Setnewpassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_CourseListServlet</servlet-name>
+    <url-pattern>/teacher_Courselist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_SelectedCourseStuServlet</servlet-name>
+    <url-pattern>/teacher_Selectedcoursestu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_StudentGrade</servlet-name>
+    <url-pattern>/teacher_Studentgrade</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_GivenPoint</servlet-name>
+    <url-pattern>/teacher_Givenpoint</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_QuitCourseServlet</servlet-name>
+    <url-pattern>/student_Quitcourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_ChoiceCourseServlet</servlet-name>
+    <url-pattern>/student_Choicecourse</url-pattern>
   </servlet-mapping>
   
   <session-config>
